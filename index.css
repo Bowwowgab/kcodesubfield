@@ -1,0 +1,315 @@
+body{
+    margin: 0;
+    padding:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header, 
+.header-contianer-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header{
+    justify-content: space-between;
+    height:  40px;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+}
+
+.mobile-veiw-menu-div {
+    font-size: 24px;
+    cursor:  pointer;   
+    display: none;
+}
+
+.mobile-view-menus{
+    z-index: 1;
+    left: 0;
+    top: 0;
+    position: absolute;
+    min-width: 240px; 
+    height: 100vh;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    transition: 1s; 
+}
+
+.mobile-veiw-menustyle{
+    transform: translateX(0);    
+}
+.mobile-veiw-menu-div span{
+    padding: 15px;
+}
+
+.mobilemenuclose-btn{
+    margin-left: 180px;
+    padding: 10px;
+}
+
+.mobile-view-menus ul,li,
+.mainpage-menu ul, li{
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    list-style: none;
+}
+
+.mobile-view-menus a, 
+.mainpage-menu a {
+    color: black;
+    padding: 20px;
+    display: block; 
+    word-spacing: 9px;
+    text-decoration: none;
+}
+
+.mobile-view-menus a:hover{
+    background-color: #ddd; 
+}
+
+.mylogo-div img{
+    height:  35px; 
+    width:   30px;
+    padding: 10px;
+}
+
+main, 
+.main-second-div,
+.main-third-div,
+.main-forth-div,
+.footer-container-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main-first-div{
+    background: url("/images/gbk.jpg") no-repeat;
+    background-size: 100% 100%; 
+    background-position: bottom center;
+    height: 900px;
+    width: 100%;
+    background-color: white;
+}
+
+.main-second-div{
+    flex-direction: column;
+    min-width: 60%; 
+    padding: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: #001E5E;
+    background-color: #ddd;
+    box-shadow: 0px 20px 40px 0px #007bff74;
+}
+
+.motto{ 
+    text-align: center;
+    word-wrap: normal;
+    font-weight: 900;
+    font-size: 250%; 
+    font-variant: normal;
+    font-family: Integralcf, sans-serif;
+}
+
+.ceo-card-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-style: italic;
+}
+
+.ceo-card img{
+    height: 50px;
+    width:  50px;
+    border-radius: 50%;
+    margin-right: 9px;
+    padding: 10px;
+}
+
+.title{
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgba(68, 67, 67, 0.733);
+    margin-top: 50px;
+}
+
+.main-third-div{
+   flex-flow: wrap row;
+   gap: 40px;
+   padding-top: 40px;
+ }
+
+.services-our-services{
+    width:  270px;
+    height: 455px;
+    border-radius: 8px;
+    border: 0.5px solid #ddd;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+
+.ourservices-img{
+    height: 230px;  
+}
+
+.ourservices-img img{
+    height: 100%;
+    width:  100%;
+    background-color: #ddd;
+    filter: contrast(30%);
+}
+
+.writeups{
+    padding: 15px;
+    text-overflow: ellipsis;
+    font-size: small;
+    height: 80px; 
+    overflow: hidden;
+}
+
+.services-our-services:hover{
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.318);
+    transform: scale(1.06143);
+}
+.services-our-services:hover 
+.ourservices-img img {
+    filter: none;
+}
+.services-our-services:hover .writeups{
+    height: auto;
+    font-size: 13px;
+}
+
+.main-forth-div{
+    margin-top: -60px;
+    flex-direction: row;
+    gap: 40px;
+    padding: 10px;
+    width: 80%;
+    text-align: justify;
+    word-break: normal;
+    line-height: 45px;
+}
+
+.coylogo-div img{
+    height: 140px;
+    width:  140px;
+}
+
+footer{
+    background: linear-gradient(to bottom right, #323232, #191919);
+    padding: 10px;
+    color: white;
+}
+
+.footer-container-div{
+    padding: 30px;
+    gap: 30px;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.right-div{
+    font-size: x-small;
+    margin-left: 30px;
+}
+
+@media (max-width:900px) {
+
+     /* Mobile view menu */
+     .mobile-veiw-menu-div{
+        display: flex;
+    }   
+
+    /* My Logo Div  */
+    .mylogo-div, 
+    .mainpage-menu{
+        display: none;
+    }
+
+    .main-third-div,
+    .main-forth-div,
+    .footer-container-div{
+        flex-flow: wrap row;
+        gap: 30px;
+     }
+
+     .footer-container-div{
+        justify-content: flex-start;
+     }
+} 
+
+
+@media (min-width: 901px) {
+
+    .mainpage-menu ul,li{
+        display: inline-block;
+    }
+
+    .mainpage-menu a{
+        word-spacing: normal;
+        position: relative;
+        padding: 0.5rem 1.07143rem 4px;
+    }
+      
+    .mainpage-menu a::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 3px;
+        background: #007AFF;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+    }
+    
+    .mainpage-menu a:hover::before {
+        width: 70%;
+    }
+
+    .services-our-services{
+        width:  350px;
+    }  
+}
+
+/* transition: opacity 0.5s ease-in; */
+    /* transform: scale(1.4) rotate(12deg); */
+    /* display: block; */
+    /* opacity: 1; */
+    /* visibility:visible;  */
+     /* opacity: 0; */
+     /* visibility: hidden;  */
+      /* color: white; */
+    /* background-color: hsla(0, 0%, 100%, 0.412) ;
+    backdrop-filter: blur(10px); */
+/* .mobile-veiw-menu-div:hover > .mobile-view-menus */
+ /* white-space: normal; */
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  /* letter-spacing: 1px;
+  font-family: Integralcf, Arial, sans-serif;
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 83px; */
+  /* <div class="other-detial">
+  Welcome to our information technology world,
+  where creativity meets
+  technology. Our expert
+  team is dedicated to transforming
+  your business processes and driving
+  success through innovative information technology
+  solutions
+</div> */
