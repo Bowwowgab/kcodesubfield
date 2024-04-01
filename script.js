@@ -10,3 +10,8 @@ window.addEventListener('resize', ()=>{
     }
 })
 
+
+window.addEventListener('scroll', () =>{
+    (window.scrollY > 100 && window.innerWidth >= 1023)? document.querySelector('header').classList.add('header-style'): document.querySelector('header').classList.remove('header-style');
+})
+
