@@ -152,7 +152,7 @@ main{
 
   .carousel-item img {
     object-fit: cover;
-    height: 700px;
+    height: 100vh;
     width: 100%;
   }
   
