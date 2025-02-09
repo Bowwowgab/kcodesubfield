@@ -2,3 +2,12 @@ body{
 background-color:#333;
 color: white;
 }
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-item: space-between;
+    background-color: white;
+    color: #333;
+    font-size: large;
+}
