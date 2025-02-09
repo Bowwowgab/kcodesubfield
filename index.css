@@ -6,8 +6,9 @@ font-family:sans-serif;
 }
 
 header{
-    height: 70px;
+    height: 90px;
     display: flex;
+    align-items:center;
     flex-direction: column;
     justify-item: space-between;
     background-color: white;
